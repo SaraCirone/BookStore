@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="d-flex justify-content-center">
+
+        <table id="books" border="1">
+            <thead>
+                <tr>
+                    <th>titolo </th>
+                    <th>descrizione </th>
+                    <th>autore </th>
+                    <th>pezzi </th>
+                    <th>genere </th>
+                    <th>ISBN </th>
+                    <th>prezzo </th>
+                    <th>copertina</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor= "let book of books">
+                    <td>{{book.titolo}}</td>
+                    <td>{{book.descrizione}}</td>
+                    <td>{{book.autore}}</td>
+                    <td>{{book.pezzi}}</td>
+                    <td>{{book.genere}}</td>
+                    <td>{{book.ISBN}}</td>
+                    <td>{{book.prezzo}}</td>
+                    <td>{{book.copertina}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
