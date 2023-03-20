@@ -1,0 +1,39 @@
+package it.saracirone.fabula;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import it.saracirone.fabula.services.RuoloService;
+import it.saracirone.fabula.services.UtenteService;
+
+@SpringBootApplication
+public class FabulaApplication implements CommandLineRunner {
+	
+	ApplicationContext ctx = new AnnotationConfgApplicationContext(Beans.class);
+
+	public static void main(String[] args) {
+		SpringApplication.run(FabulaApplication.class, args);
+	}
+
+	@Override 
+	public void run(String...args) throws Exception {
+		((AnnotationConfgApplicationContext)ctx).close();
+	}
+	
+	@Autowired
+	private UtenteService us;
+	
+	@Autowired
+	private RuoloService rs; 
+	
+	public void popolaDB() {
+		
+	}
+	
+	
+	
+}

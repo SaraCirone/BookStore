@@ -1,0 +1,5 @@
+package it.saracirone.fabula.entities;
+
+public class Ruolo {
+
+}

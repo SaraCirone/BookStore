@@ -1,0 +1,48 @@
+package it.saracirone.fabula;
+
+
+import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import it.saracirone.fabula.config.Beans;
+import it.saracirone.fabula.entities.Ruolo;
+import it.saracirone.fabula.entities.TipoRuolo;
+import it.saracirone.fabula.services.RuoloService;
+import it.saracirone.fabula.services.UtenteService;
+
+@SpringBootApplication
+public class FabulaApplication implements CommandLineRunner {
+	
+	ApplicationContext ctx = new AnnotationConfigApplicationContext(Beans.class);
+
+	public static void main(String[] args) {
+		SpringApplication.run(FabulaApplication.class, args);
+	}
+
+	@Override 
+	public void run(String...args) throws Exception {
+		((AnnotationConfigApplicationContext)ctx).close();
+	}
+	
+	@Autowired
+	private UtenteService us;
+	
+	@Autowired
+	private RuoloService rs; 
+	
+	public void popolaDB() {
+		Ruolo r1 = (Ruolo)ctx.getBean("ruolo", TipoRuolo.ROLE_ADMIN);
+		Ruolo r2 = (Ruolo)ctx.getBean("Ruolo", TipoRuolo.ROLE_USER);
+
+	
+	
+}

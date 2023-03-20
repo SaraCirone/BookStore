@@ -1,0 +1,22 @@
+package it.saracirone.fabula.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+@Entity
+@Table(name = "utenti")
+@Builder
+@Getter
+@Setter
+
+
+
+
+public class Utente {
+
+	
+	
+}
