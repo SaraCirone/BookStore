@@ -9,6 +9,7 @@ import { ChisiamoComponent } from './components/chisiamo/chisiamo.component';
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { PacchettiComponent } from './components/pacchetti/pacchetti.component';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
+import { UserComponent } from './components/user/user.component';
 
 
 
@@ -29,6 +30,10 @@ const routes: Routes = [
     {
         path: "registrazione",
         component: RegistrazioneComponent
+    },
+    {
+        path: "user",
+        component: UserComponent
     },
     {
         path: "chisiamo",

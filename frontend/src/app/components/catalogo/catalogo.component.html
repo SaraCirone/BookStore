@@ -1,34 +1,32 @@
 <div class="container-fluid">
-    <div class="d-flex justify-content-center">
+    <div class="row" style="padding: 30px;">
+        <div class="col-md-2">
+            <h2> Lista Categorie</h2>
+            <table>
+                <tbody>
+                    <tr *ngFor="let genere of generi">
+                        <td><a class="categorie" href="#">{{genere.nome}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-8 d-flex">
+            <div class="row d-flex justify-content-end">
+                <div class="col" *ngFor="let book of books">
+                    <div class="bookCard justify-content-center">
+                        <div class="card-body text-center">
+                            <h5 class="card-title" style="margin-bottom: 10px;">{{book.titolo}}</h5>
+                            <a href=""><img src="{{ book.copertina }}" class="card-img-top" alt="{{ book.titolo }}"></a>
+                            <p class="card-text">di <a href="" class="autoreName">{{book.autore}}</a></p>
+                            <p class="card-text">{{ book.prezzo | currency:'EUR' }}</p>
+                            <a href="#" class="btn btn-primary"><i class="bi bi-cart-fill"></i> Acquista</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
 
-        <table id="books" border="1">
-            <thead>
-                <tr>
-                    <th>titolo </th>
-                    <th>descrizione </th>
-                    <th>autore </th>
-                    <th>pezzi </th>
-                    <th>genere </th>
-                    <th>ISBN </th>
-                    <th>prezzo </th>
-                    <th>copertina</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor= "let book of books">
-                    <td>{{book.titolo}}</td>
-                    <td>{{book.descrizione}}</td>
-                    <td>{{book.autore}}</td>
-                    <td>{{book.pezzi}}</td>
-                    <td>{{book.genere}}</td>
-                    <td>{{book.ISBN}}</td>
-                    <td>{{book.prezzo}}</td>
-                    <td>{{book.copertina}}</td>
-
-                </tr>
-            </tbody>
-        </table>
-
-
+        </div>
     </div>
 </div>
