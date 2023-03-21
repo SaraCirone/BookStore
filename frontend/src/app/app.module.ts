@@ -15,6 +15,7 @@ import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { PacchettiComponent } from './components/pacchetti/pacchetti.component';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { UserComponent } from './components/user/user.component';
+import { PaginaprodottoComponent } from './components/paginaprodotto/paginaprodotto.component';
 
 
 
@@ -31,6 +32,7 @@ import { UserComponent } from './components/user/user.component';
     PacchettiComponent,
     RegistrazioneComponent,
     UserComponent,
+    PaginaprodottoComponent,
 
 
 
