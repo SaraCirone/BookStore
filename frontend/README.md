@@ -12,6 +12,7 @@ COMPONENTI inseriti e da finire
 6. User: wip
 7. Nav: completato
 8. Error: completato
+9. Chi siamo: completato
 
 
 COMPONENTI da inserire 
