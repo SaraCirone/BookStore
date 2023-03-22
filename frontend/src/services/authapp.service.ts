@@ -8,7 +8,13 @@ export class AuthappService {
   constructor() { }
 
   autentica = (userid: string, password: string) : boolean => {
-    return(userid === "Sara" && password === "1234") ? true : false;
+    var retVal = (userid === "Sara" && password === "1234") ? true : false;
+
+    if (retVal) {
+        sessionStorage.setItem("utente", userid);
+    }
+
+    return retVal;
   }
 
 

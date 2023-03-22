@@ -68,6 +68,14 @@ a {
     color: #1e8c79;
   }
 
+  .btn-login2 {
+    background-color: #7fffd4;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #1e8c79;
+  }
+
+
   @media (max-width: 991px) {
     .link i {
       display: none; /* nasconde l'icona */
@@ -76,10 +84,28 @@ a {
       display: inline-block; /* mostra il testo del link */
     }
 
-    .btn-login {
-       margin-top: 20px;
-      }
     a #userIcon {
         margin-left: 20px;
     }
+  }
+
+
+  //prova
+
+  .prova {
+    border: 1px solid red;
+  }
+
+
+  .dropdown-menu {
+    background-color: #1e8c79;
+    padding: 10px;
+  }
+
+  i {
+    width: 30px;
+  }
+
+  svg {
+   color: white;
   }
