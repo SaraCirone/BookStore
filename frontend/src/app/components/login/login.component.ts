@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     console.log(this.userId);
 
     if (this.BasicAuth.autentica(this.userId, this.password)) {
-        this.route.navigate(['home']);
+        this.route.navigate(['home', this.userId]);
         this.autenticato = true;
 
     } else {

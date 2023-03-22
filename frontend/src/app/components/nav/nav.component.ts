@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthappService } from 'src/services/authapp.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public BasicAuth: AuthappService) { }
 
   ngOnInit(): void {
   }

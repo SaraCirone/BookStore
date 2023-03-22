@@ -14,6 +14,7 @@ COMPONENTI inseriti e da finire
 8. Error: completato
 9. Chi siamo: completato
 10. Pagina prodotto: wip
+11. Logout
 
 
 COMPONENTI da inserire 
@@ -24,6 +25,7 @@ Metodo di pagamento
 
 Portafoglio Venditore (o simili)
     portafoglio digitale dal quale puoi passare i soldi dal portafoglio alla carta o conto corrente (simil vinted)
+    
 Lista Ordini per il Venditore con i dati degli acquirenti (una volta evasi gli ordini e cliccato su "completato" in questo pannello, viene inviato un'email all'acquirente per notificargli la spedizione del libro)
 
 Pannello admin

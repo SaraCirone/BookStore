@@ -1,10 +1,7 @@
-//DEFINITIVO CSS
-
 .bg-nav {
     background-color: #1e8c79;
     font-size: 15px;
     text-transform: uppercase;
-
 }
 
 #logo {
@@ -68,14 +65,6 @@ a {
     color: #1e8c79;
   }
 
-  .btn-login2 {
-    background-color: #7fffd4;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #1e8c79;
-  }
-
-
   @media (max-width: 991px) {
     .link i {
       display: none; /* nasconde l'icona */
@@ -88,14 +77,6 @@ a {
         margin-left: 20px;
     }
   }
-
-
-  //prova
-
-  .prova {
-    border: 1px solid red;
-  }
-
 
   .dropdown-menu {
     background-color: #1e8c79;

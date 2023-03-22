@@ -10,6 +10,7 @@ import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { PacchettiComponent } from './components/pacchetti/pacchetti.component';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { UserComponent } from './components/user/user.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 
 
@@ -20,13 +21,18 @@ const routes: Routes = [
         component: HomeComponent
     },//path che determina cosa si visualizza quando si arriva nell'indirizzo normale del localhost
     {
-        path: "home",
+        path: "home/:userid",
         component: HomeComponent
     },//path della home
     {
         path: "login",
         component: LoginComponent
     },
+    {
+        path: "logout",
+        component: LogoutComponent
+    },
+
     {
         path: "registrazione",
         component: RegistrazioneComponent

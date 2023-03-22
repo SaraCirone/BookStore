@@ -17,5 +17,12 @@ export class AuthappService {
     return retVal;
   }
 
+  loggedUser = () : string | null => (sessionStorage.getItem("utente")) ? sessionStorage.getItem("utente") : "";
+
+  isLogged = (): boolean => (sessionStorage.getItem("utente")) ? true : false;
+
+  clearUser = (): void => sessionStorage.removeItem("utente");
+
+  clearAll = (): void => sessionStorage.clear();
 
 }

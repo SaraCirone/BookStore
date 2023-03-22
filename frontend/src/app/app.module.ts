@@ -16,6 +16,7 @@ import { PacchettiComponent } from './components/pacchetti/pacchetti.component';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { UserComponent } from './components/user/user.component';
 import { PaginaprodottoComponent } from './components/paginaprodotto/paginaprodotto.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 
 
@@ -33,6 +34,7 @@ import { PaginaprodottoComponent } from './components/paginaprodotto/paginaprodo
     RegistrazioneComponent,
     UserComponent,
     PaginaprodottoComponent,
+    LogoutComponent,
 
 
 
