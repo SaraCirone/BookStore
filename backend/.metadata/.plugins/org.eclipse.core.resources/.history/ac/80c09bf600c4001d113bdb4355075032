@@ -1,5 +1,0 @@
-package it.saracirone.fabula.repositories;
-
-public interface AutoreRepo {
-
-}

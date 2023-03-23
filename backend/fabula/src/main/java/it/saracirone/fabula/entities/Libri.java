@@ -35,7 +35,6 @@ public class Libri {
 	
 	private String titolo; 
 	private int numeroPag; 
-	private Categorie categorie;
 	private String sinossi; 
 	private String imgUrl;
 	private Double prezzo; 

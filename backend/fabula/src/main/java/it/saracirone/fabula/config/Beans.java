@@ -4,10 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-import com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler.Builder;
-
 import it.saracirone.fabula.entities.Autore;
-import it.saracirone.fabula.entities.Categorie;
 import it.saracirone.fabula.entities.Libri;
 import it.saracirone.fabula.entities.Ruolo;
 import it.saracirone.fabula.entities.TipoRuolo;
@@ -34,11 +31,10 @@ public class Beans {
 	
 	@Bean
 	@Scope("prototype")
-	public Libri libro(String titolo, int numeroPag, Categorie categorie, String sinossi, String imgUrl, Double prezzo, boolean disp) {
+	public Libri libro(String titolo, int numeroPag,  String sinossi, String imgUrl, Double prezzo, boolean disp) {
 		return Libri.builder()
 		.titolo(titolo)
 		.numeroPag(numeroPag)
-		.categorie(categorie)
 		.sinossi(sinossi)
 		.imgUrl(imgUrl)
 		.prezzo(prezzo)
