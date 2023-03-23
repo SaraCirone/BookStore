@@ -1,5 +1,4 @@
 export interface Ibooks {
-    id: number
     titolo: string
     descrizione: string
     autore: string
@@ -7,7 +6,7 @@ export interface Ibooks {
     genere: string
     ISBN: string
     prezzo: number
-    copertina: string
+    imgUrl: string
     active: boolean
     data: Date
 

@@ -3,14 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './pages/login/login.component';
 import { ErrorComponent } from './components/error/error.component';
-import { ChisiamoComponent } from './components/chisiamo/chisiamo.component';
-import { CatalogoComponent } from './components/catalogo/catalogo.component';
-import { PacchettiComponent } from './components/pacchetti/pacchetti.component';
-import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
-import { UserComponent } from './components/user/user.component';
+import { ChisiamoComponent } from './pages/chisiamo/chisiamo.component';
+import { CatalogoComponent } from './pages/catalogo/catalogo.component';
+import { PacchettiComponent } from './pages/pacchetti/pacchetti.component';
+import { RegistrazioneComponent } from './pages/registrazione/registrazione.component';
+import { UserComponent } from './pages/user/user.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { RouteGuardService } from 'src/services/route-guard.service';
+import { CatalogoGridComponent } from './pages/catalogo-grid/catalogo-grid.component';
 
 
 
@@ -30,7 +32,7 @@ const routes: Routes = [
     },
     {
         path: "logout",
-        component: LogoutComponent
+        component: LogoutComponent, canActivate:[RouteGuardService]
     },
 
     {
@@ -51,7 +53,11 @@ const routes: Routes = [
     },
     {
         path: "Catalogo",
-        component: CatalogoComponent
+        component: CatalogoComponent,  canActivate:[RouteGuardService]
+    },
+    {
+        path: "Catalogo/grid",
+        component: CatalogoGridComponent,  canActivate:[RouteGuardService]
     },
     {
         path: "**",

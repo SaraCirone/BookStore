@@ -1,0 +1,22 @@
+<div class="col">
+    <div class="card card-product-grid text-center">
+       <h5 class="text-center"><a href="#" class="title">{{book.titolo}}</a></h5>
+        <a href="#" class="img-wrap"><img src="{{ book.imgUrl }}"  class="img-rounded"></a>
+        <div class="info-wrap">
+            di  <a href="#" class="autoreName text-center"> {{book.autore}}</a>
+            <div class="price mb-2">
+               {{book.prezzo | currency: "EUR"}}
+            </div>
+            <button href="#" class="btn btn-sm btn-warning" (click)="editArt()">
+                <i class="bi bi-pencil"></i>
+            </button>
+            <button href="#" class="btn btn-sm btn-danger" (click)="delArt()">
+                <i class="bi bi-x-circle"></i>
+            </button>
+            <br>
+            <button href="#" class="btn btn-primary">
+                Acquista
+            </button>
+        </div>
+    </div>
+</div>
