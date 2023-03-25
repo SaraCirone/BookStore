@@ -40,20 +40,10 @@ public class Autore {
     private String autoreNick; 
 	@Enumerated(EnumType.STRING)
 	private TipoRuolo tipoRuolo = TipoRuolo.ROLE_AUTHOR; 
-    @OneToMany(mappedBy = "autore", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Books> book = new ArrayList<>();
+
 	private String email;
 	private String password;
 	private boolean attivo = true;
 	
-	
-	public Autore (String nome, String cognome, String autoreNick, TipoRuolo tipoRuolo, List<Books> book, String email, String password) {
-		this.nome = nome; 
-		this.cognome = cognome; 
-		this.autoreNick = autoreNick; 
-		this.book = book;
-		this.tipoRuolo = tipoRuolo; 
-		this.email = email; 
-		this.password = password; 
-	}
+
 }

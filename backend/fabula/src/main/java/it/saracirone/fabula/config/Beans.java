@@ -66,7 +66,7 @@ public class Beans {
 	
 	@Bean
 	@Scope("prototype")
-	Books book(String titolo, String descrizione, Double prezzo, String imgUrl, int unita, Date dataCreazione, Genere genere, Autore autore_id) {
+	Books book(String titolo, String descrizione, Double prezzo, String imgUrl, int unita, Date dataCreazione, Genere genere, Autore autore) {
 		return Books.builder()
 				.titolo(titolo)
 				.descrizione(descrizione)
@@ -74,7 +74,7 @@ public class Beans {
 				.imgUrl(imgUrl)
 				.dataCreazione(dataCreazione)
 				.genere(genere)
-				.autore(autore_id)
+				.autore(autore)
 				.build();
 
 			
@@ -84,7 +84,7 @@ public class Beans {
 	
 	@Bean
 	@Scope("prototype")
-	Autore autore(TipoRuolo tipoRuolo, String autoreNick, String email, String password, String nome, String cognome, List<Books> book) {
+	Autore autore(TipoRuolo tipoRuolo, String autoreNick, String email, String password, String nome, String cognome) {
 		return Autore.builder()
 		.tipoRuolo(TipoRuolo.ROLE_AUTHOR)
 		.autoreNick(autoreNick)
@@ -92,7 +92,6 @@ public class Beans {
 		.password(password)
 		.nome(nome)
 		.cognome(cognome)
-		.book(new ArrayList<>())
 		.attivo(true)
 		.build();
 		

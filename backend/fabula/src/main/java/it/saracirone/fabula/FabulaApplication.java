@@ -90,14 +90,10 @@ public class FabulaApplication implements CommandLineRunner {
 		as.save(au1);
 		as.save(au2);
 		
-		Books book1 =(Books)ctx.getBean("book","Titolo del libro 1", "Un libro Fantasy", 12.00, "img.png", 4, (LocalDate.of(2020, 2, 24)), "FANTASY", Autore.getId());
-		Books book2 =(Books)ctx.getBean("book","Titolo del libro 2", "Un libro Horror", 13.00, "img2.png", 6, (LocalDate.of(2020, 8, 12)), "HORROR");
-		Books book3 =(Books)ctx.getBean("book","Titolo del libro 3", "Un libro Romance", 15.00, "img2.png", 2, (LocalDate.of(2022, 1, 01)), "ROMANCE");
+		Books book1 =(Books)ctx.getBean("book","Titolo del libro 1", "Un libro Fantasy", 12.00, "img.png", 4, (LocalDate.of(2020, 2, 24)), "FANTASY", au1);
+		Books book2 =(Books)ctx.getBean("book","Titolo del libro 2", "Un libro Horror", 13.00, "img2.png", 6, (LocalDate.of(2020, 8, 12)), "HORROR",  au2);
+		Books book3 =(Books)ctx.getBean("book","Titolo del libro 3", "Un libro Romance", 15.00, "img2.png", 2, (LocalDate.of(2022, 1, 01)), "ROMANCE",  au1);
 	
-		au1.getBook().add(book1);
-		au1.getBook().add(book2);
-		au2.getBook().add(book3);
-		
 		bs.save(book1); 
 		bs.save(book2);
 		bs.save(book3);
