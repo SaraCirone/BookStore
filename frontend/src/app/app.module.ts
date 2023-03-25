@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
-import { ErrorComponent } from './components/error/error.component';
+import { ErrorComponent } from './pages/error/error.component';
 import { ChisiamoComponent } from './pages/chisiamo/chisiamo.component';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { PacchettiComponent } from './pages/pacchetti/pacchetti.component';
@@ -19,6 +19,8 @@ import { PaginaprodottoComponent } from './pages/paginaprodotto/paginaprodotto.c
 import { LogoutComponent } from './components/logout/logout.component';
 import { CatalogoGridComponent } from './pages/catalogo-grid/catalogo-grid.component';
 import { BookCardComponent } from './components/book-card/book-card.component';
+import { RegistrazioneUserComponent } from './pages/registrazione-user/registrazione-user.component';
+import { RegistrazioneAuthorComponent } from './pages/registrazione-author/registrazione-author.component';
 
 
 
@@ -39,6 +41,8 @@ import { BookCardComponent } from './components/book-card/book-card.component';
     LogoutComponent,
     CatalogoGridComponent,
     BookCardComponent,
+    RegistrazioneUserComponent,
+    RegistrazioneAuthorComponent,
 
 
 

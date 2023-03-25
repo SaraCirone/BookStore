@@ -13,8 +13,6 @@ export class ErrorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onButtonClick() {
-    this.router.navigate(['/home']);
-  }
+
 
 }

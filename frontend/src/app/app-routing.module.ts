@@ -4,7 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { LoginComponent } from './pages/login/login.component';
-import { ErrorComponent } from './components/error/error.component';
+import { ErrorComponent } from './pages/error/error.component';
 import { ChisiamoComponent } from './pages/chisiamo/chisiamo.component';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { PacchettiComponent } from './pages/pacchetti/pacchetti.component';
@@ -13,7 +13,8 @@ import { UserComponent } from './pages/user/user.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { RouteGuardService } from 'src/services/route-guard.service';
 import { CatalogoGridComponent } from './pages/catalogo-grid/catalogo-grid.component';
-
+import { RegistrazioneUserComponent } from './pages/registrazione-user/registrazione-user.component';
+import { RegistrazioneAuthorComponent } from './pages/registrazione-author/registrazione-author.component';
 
 
 
@@ -24,6 +25,10 @@ const routes: Routes = [
     },//path che determina cosa si visualizza quando si arriva nell'indirizzo normale del localhost
     {
         path: "home/:userid",
+        component: HomeComponent
+    },//path della home
+    {
+        path: "home",
         component: HomeComponent
     },//path della home
     {
@@ -38,6 +43,14 @@ const routes: Routes = [
     {
         path: "registrazione",
         component: RegistrazioneComponent
+    },
+    {
+        path: "registrazione-user",
+        component: RegistrazioneUserComponent
+    },
+    {
+        path: "registrazione-author",
+        component: RegistrazioneAuthorComponent
     },
     {
         path: "user",
