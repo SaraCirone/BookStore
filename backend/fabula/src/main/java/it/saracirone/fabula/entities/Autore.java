@@ -1,7 +1,9 @@
 package it.saracirone.fabula.entities;
 
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.ArrayList;
 
 import javax.persistence.CascadeType;
@@ -15,6 +17,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -41,12 +46,17 @@ public class Autore {
     private String cognome; 
     private String autoreNick; 
 	private String email;
+	@JsonIgnore
 	private String password;
 	 @OneToOne
 	    @JoinColumn(name = "id_ruolo")
 	    private Ruolo ruolo;
 
 	private boolean attivo = true;
+	
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "autore", orphanRemoval = true)
+	@JsonManagedReference
+	private Set<Libro> libro = new HashSet<>();
 	
 
 }

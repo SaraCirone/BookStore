@@ -16,6 +16,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -24,6 +26,7 @@ import lombok.ToString;
 
 @Entity
 @Table(name = "libro")
+@Data
 @Getter
 @Setter
 @NoArgsConstructor
@@ -42,8 +45,10 @@ public class Libro {
 	 @OneToOne
 	    @JoinColumn(name = "id_genere")
 	    private Genere genere;
-	@JsonBackReference
+
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "autore_id")
+	@EqualsAndHashCode.Exclude
+	@JoinColumn(name = "autore_id", nullable = false)
+	@JsonBackReference
 	private Autore autore;
 }

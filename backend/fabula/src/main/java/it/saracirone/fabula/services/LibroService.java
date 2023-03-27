@@ -37,6 +37,26 @@ public class LibroService {
 	public void delete(Libro u) {
 		ur.delete(u);
 	}
+
+	public Optional<Libro> findById(Integer id) {
+	    return ur.findById(id);  
+	}
+	
+		
+	public void deleteById(Integer id) {
+	    Optional<Libro> libro = ur.findById(id);
+	    if (libro.isPresent()) {
+	        ur.delete(libro.get());
+	    } else {
+	        // Il libro non esiste
+	        throw new RuntimeException("Libro non trovato");
+	    }
+	}
+
+	public List<Libro> findByTitoloContaining(String titolo) {
+		return ur.findByTitoloContaining(titolo);
+	}
+
 }
 
 

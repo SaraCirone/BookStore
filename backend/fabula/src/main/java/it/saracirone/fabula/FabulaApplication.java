@@ -17,6 +17,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
 import it.saracirone.fabula.config.Beans;
 import it.saracirone.fabula.entities.Ruolo;
@@ -27,15 +29,20 @@ import it.saracirone.fabula.entities.Admin;
 import it.saracirone.fabula.entities.Genere;
 import it.saracirone.fabula.entities.Libro;
 import it.saracirone.fabula.entities.Utente;
+import it.saracirone.fabula.repositories.LibroRepo;
 import it.saracirone.fabula.services.AdminService;
 import it.saracirone.fabula.services.AutoreService;
 import it.saracirone.fabula.services.GenereService;
 import it.saracirone.fabula.services.LibroService;
+import it.saracirone.fabula.controllers.LibroController;
 import it.saracirone.fabula.services.RuoloService;
 import it.saracirone.fabula.services.UtenteService;
+import org.springframework.http.ResponseEntity;
 
 
 
+
+@ComponentScan("it.saracirone.fabula")
 @SpringBootApplication
 public class FabulaApplication implements CommandLineRunner {
 	
@@ -43,13 +50,14 @@ public class FabulaApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FabulaApplication.class, args);
+		
 	}
 
 	@Override 
 	public void run(String...args) throws Exception {
-		//popolaDB();
-		//popolaDB2();
+		controlloDb();
 		//addDB();
+
 		((AnnotationConfigApplicationContext)ctx).close();
 		
 	}
@@ -74,7 +82,6 @@ public class FabulaApplication implements CommandLineRunner {
 	@Autowired
 	private AdminService ads;
 	
-
 	
 
 	public void addDB() {
@@ -148,6 +155,17 @@ public class FabulaApplication implements CommandLineRunner {
     	autore2.setRuolo(r2);
         as.save(autore2);
         
+        
+    	Autore autore3 = new Autore();
+    	autore3.setNome("Autore");
+    	autore3.setCognome("03");
+    	autore3.setAutoreNick("Autore03");
+    	autore3.setEmail("autore3@example.com");
+    	autore3.setPassword("autore03");
+		autore3.setRuolo(r2);
+        as.save(autore3);
+
+        
         System.out.println("Creazine Autori avvenuta!");
    
         
@@ -203,6 +221,17 @@ public class FabulaApplication implements CommandLineRunner {
         libro5.setAutore(autore2);
         ls.save(libro5);
         
+        Libro libro6 = new Libro();
+        libro6.setTitolo("Multiversum");
+        libro6.setDescrizione("Ambientato in un multiverso con due ragazzi");
+        libro6.setPrezzo(15.00);
+        libro6.setImgUrl("multiversum.png");
+        libro6.setPezzi(10);
+		libro6.setGenere(g7);
+        libro6.setAutore(autore3);
+        ls.save(libro6);
+
+        
         
         System.out.println("Creazine Libri avvenuta!");
         
@@ -210,6 +239,11 @@ public class FabulaApplication implements CommandLineRunner {
 		
 		System.out.println("Popolazione Avvenuta!");
 	}
+	
+	public void controlloDb() {
+		System.out.println("Esecuzine avviata con successo");
+	}
+
 	
 	
 }
