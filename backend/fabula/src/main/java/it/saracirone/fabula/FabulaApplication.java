@@ -173,20 +173,22 @@ public class FabulaApplication implements CommandLineRunner {
         libro1.setTitolo("Io sono leggenda");
         libro1.setDescrizione("Ambientato in un futuro post apocalittico, l'unico sopravvissuto deve sopravvivere agli zombie");
         libro1.setPrezzo(15.00);
-        libro1.setImgUrl("iosonoleggenda.png");
+        libro1.setImgUrl("https://i.imgur.com/dwsEhdZ.jpg");
         libro1.setPezzi(10);
         libro1.setGenere(g7);
         libro1.setAutore(autore1);
+        libro1.setISBN("L0001");
         ls.save(libro1);
 
         Libro libro2 = new Libro();
         libro2.setTitolo("Bones ad All");
         libro2.setDescrizione("Un libro Horror che parla di due ragazzi cannibali");
         libro2.setPrezzo(12.30);
-        libro2.setImgUrl("bonesandall.png");
+        libro2.setImgUrl("https://i.imgur.com/gwnGsPf.png");
         libro2.setPezzi(4);
         libro2.setGenere(g1);
         libro2.setAutore(autore1);
+        libro2.setISBN("L0002");
         ls.save(libro2);
         
         
@@ -194,10 +196,11 @@ public class FabulaApplication implements CommandLineRunner {
         libro3.setTitolo("Il signore degli Anelli");
         libro3.setDescrizione("Le avventure di una compagnia che viaggia tra molti pericoli per distruggere un antico anello");
         libro3.setPrezzo(20.00);
-        libro3.setImgUrl("ilsignoredeglianelli.png");
+        libro3.setImgUrl("https://i.imgur.com/POcfxs8.png");
         libro3.setPezzi(5);
         libro3.setGenere(g9);
         libro3.setAutore(autore1);
+        libro3.setISBN("L0003");
         ls.save(libro3);
         
         
@@ -205,30 +208,33 @@ public class FabulaApplication implements CommandLineRunner {
         libro4.setTitolo("12 anni schiavo");
         libro4.setDescrizione("Storia autobiografica di uno schiavo di colore nel 1800");
         libro4.setPrezzo(10.00);
-        libro4.setImgUrl("12annischiavo.png");
+        libro4.setImgUrl("https://i.imgur.com/T2zDWmK.jpg");
         libro4.setPezzi(7);
         libro4.setGenere(g3);
         libro4.setAutore(autore2);
+        libro4.setISBN("L0004");
         ls.save(libro4);
         
         Libro libro5 = new Libro();
         libro5.setTitolo("After");
         libro5.setDescrizione("Storia di due ragazzi e del rapporto complicato");
         libro5.setPrezzo(10.00);
-        libro5.setImgUrl("after.png");
+        libro5.setImgUrl("https://i.imgur.com/d8Lu9fn.jpg");
         libro5.setPezzi(7);
         libro5.setGenere(g5);
         libro5.setAutore(autore2);
+        libro5.setISBN("L0005");
         ls.save(libro5);
         
         Libro libro6 = new Libro();
         libro6.setTitolo("Multiversum");
         libro6.setDescrizione("Ambientato in un multiverso con due ragazzi");
         libro6.setPrezzo(15.00);
-        libro6.setImgUrl("multiversum.png");
+        libro6.setImgUrl("https://i.imgur.com/NoXNZEh.png");
         libro6.setPezzi(10);
 		libro6.setGenere(g7);
         libro6.setAutore(autore3);
+        libro6.setISBN("L0006");
         ls.save(libro6);
 
         

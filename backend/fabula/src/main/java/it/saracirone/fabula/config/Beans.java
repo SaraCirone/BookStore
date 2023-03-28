@@ -57,7 +57,7 @@ public class Beans {
 	//Libro
 	@Bean
 	@Scope("prototype")
-	public Libro libro(String titolo, String descrizione, Double prezzo, String imgUrl, int pezzi, Genere tipoGenere , Autore autore) {
+	public Libro libro(String titolo, String descrizione, Double prezzo, String imgUrl, int pezzi, Genere tipoGenere , Autore autore, String ISBN) {
 		return Libro.builder()
 				.titolo(titolo)
 				.descrizione(descrizione)
@@ -66,6 +66,7 @@ public class Beans {
 				.pezzi(pezzi)
 				.genere(tipoGenere)
 				.autore(autore)
+				.ISBN(ISBN)
 				.build();
 	}
 	

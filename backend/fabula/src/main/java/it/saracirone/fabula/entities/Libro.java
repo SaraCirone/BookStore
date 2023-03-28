@@ -51,4 +51,5 @@ public class Libro {
 	@JoinColumn(name = "autore_id", nullable = false)
 	@JsonBackReference
 	private Autore autore;
+	private String ISBN; 
 }

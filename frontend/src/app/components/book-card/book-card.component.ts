@@ -20,8 +20,7 @@ export class BookCardComponent implements OnInit {
         ISBN: "",
         prezzo: 0,
         imgUrl: "",
-        active: true,
-        data: new Date()
+
     };
 
     @Output()

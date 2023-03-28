@@ -15,6 +15,8 @@ import { RouteGuardService } from 'src/services/route-guard.service';
 import { CatalogoGridComponent } from './pages/catalogo-grid/catalogo-grid.component';
 import { RegistrazioneUserComponent } from './pages/registrazione-user/registrazione-user.component';
 import { RegistrazioneAuthorComponent } from './pages/registrazione-author/registrazione-author.component';
+import { BookCardComponent } from './components/book-card/book-card.component';
+
 
 
 
@@ -56,7 +58,7 @@ const routes: Routes = [
         path: "user",
         component: UserComponent
     },
-    {
+     {
         path: "chisiamo",
         component: ChisiamoComponent
     },

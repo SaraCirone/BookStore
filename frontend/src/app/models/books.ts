@@ -7,7 +7,6 @@ export interface Ibooks {
     ISBN: string
     prezzo: number
     imgUrl: string
-    active: boolean
-    data: Date
+
 
 }
