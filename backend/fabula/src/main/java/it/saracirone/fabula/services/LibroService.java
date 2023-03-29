@@ -57,6 +57,11 @@ public class LibroService {
 		return ur.findByTitoloContaining(titolo);
 	}
 
+	
+	public List<Libro> getAllAutore() {
+		return ur.findAllAutore();
+	}
+	
 }
 
 

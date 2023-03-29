@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Ibooks } from 'src/app/models/books';
 
+
 @Component({
   selector: 'app-book-card',
   templateUrl: './book-card.component.html',

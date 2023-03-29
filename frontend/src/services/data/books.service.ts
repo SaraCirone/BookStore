@@ -27,10 +27,14 @@ export class BooksService {
 
     // getBooks = () : Ibooks[] => this.books;
 
-    getBookByDesc = (titolo: string) => {
-        return this.httpClient.get<Ibooks[]>(`http://localhost:8080/api/libri/ricercaTitolo/${titolo}`);
-    }
+    // getBookByDesc = (titolo: string) => {
+    //     return this.httpClient.get<Ibooks[]>(`http://localhost:8080/api/libri/ricercaTitolo/${titolo}`);
+    // }
 
+
+  getBooksAll(): Observable<any[]> {
+    return this.httpClient.get<any[]>(`http://localhost:8080/api/libri/catalogo`);
+  }
     // getBooksByCode = (ISBN: string) : Ibooks => {
     //     const index = this.books.findIndex(books => books.ISBN === ISBN);
     //     return this.books[index];

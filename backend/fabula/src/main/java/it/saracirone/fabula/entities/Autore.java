@@ -56,7 +56,7 @@ public class Autore {
 	
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "autore", orphanRemoval = true)
 	@JsonManagedReference
-	private Set<Libro> libro = new HashSet<>();
+	private List<Libro> libri;
 	
 
 }
